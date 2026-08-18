@@ -125,3 +125,14 @@ body {
 .animate-marquee {
   animation: marquee 30s linear infinite;
 }
+
+/* Print: strip fixed decorative layers so a printed/PDF export of this very
+   tall page doesn't rasterize the grain texture and cursor on every sheet. */
+@media print {
+  .grain-overlay {
+    display: none;
+  }
+  html.cursor-none-desktop {
+    cursor: auto;
+  }
+}

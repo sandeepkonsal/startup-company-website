@@ -58,7 +58,7 @@ export function Cursor() {
   if (reducedMotion) return null;
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-[999] hidden md:block" aria-hidden="true">
+    <div className="pointer-events-none fixed inset-0 z-[999] hidden md:block print:hidden" aria-hidden="true">
       <div
         ref={dotRef}
         className="fixed left-0 top-0 h-1.5 w-1.5 rounded-full bg-gold"
