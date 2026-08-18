@@ -1,14 +1,17 @@
-import { Nav } from "@/components/sections/Nav";
-import { Hero } from "@/components/sections/Hero";
-import { Services } from "@/components/sections/Services";
-import { Process } from "@/components/sections/Process";
-import { WhyUs } from "@/components/sections/WhyUs";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { Pricing } from "@/components/sections/Pricing";
-import { CTA } from "@/components/sections/CTA";
-import { Footer } from "@/components/sections/Footer";
-import { TrustMarquee } from "@/components/ui/TrustMarquee";
-import { Divider } from "@/components/ui/Divider";
+import { Nav } from "@/components/navigation/Nav";
+import { Hero } from "@/components/hero/Hero";
+import { GrowthStory } from "@/components/growth-story/GrowthStory";
+import { Journey } from "@/components/journey/Journey";
+import { Services } from "@/components/services/Services";
+import { WhyUs } from "@/components/services/WhyUs";
+import { Packages } from "@/components/packages/Packages";
+import { Calculator } from "@/components/calculator/Calculator";
+import { Testimonials } from "@/components/testimonials/Testimonials";
+import { FAQ } from "@/components/faq/FAQ";
+import { FinalCTA } from "@/components/sections/FinalCTA";
+import { ContactForm } from "@/components/contact/ContactForm";
+import { Footer } from "@/components/footer/Footer";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -16,17 +19,19 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <TrustMarquee />
+        <GrowthStory />
+        <Journey />
         <Services />
-        <Divider from="paper" to="ink" />
-        <Process />
-        <Divider from="ink" to="paper" />
         <WhyUs />
+        <Packages />
+        <Calculator />
         <Testimonials />
-        <Pricing />
-        <CTA />
+        <FAQ />
+        <FinalCTA />
+        <ContactForm />
       </main>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }

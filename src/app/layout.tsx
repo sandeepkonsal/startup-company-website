@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import { Cursor } from "@/components/ui/Cursor";
+import { site } from "@/config/site";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -19,24 +20,33 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "The Startup Company | Business Registration & Tax, Done Right",
-  description:
-    "CIPC business registration, SARS tax compliance, and ongoing bookkeeping for South African small business owners. Registered fast, filed on time, every time.",
-  metadataBase: new URL("https://thestartupcompany.co.za"),
+  title: `${site.name} | ${site.tagline}`,
+  description: site.description,
+  metadataBase: new URL(site.url),
+  keywords: [
+    "company registration South Africa",
+    "register a business in South Africa",
+    "website design South Africa",
+    "business website development",
+    "website hosting South Africa",
+    "SEO services South Africa",
+    "Google Ads South Africa",
+    "digital marketing South Africa",
+  ],
   openGraph: {
-    title: "The Startup Company",
-    description:
-      "CIPC business registration, SARS tax compliance, and ongoing bookkeeping for South African small business owners.",
-    url: "https://thestartupcompany.co.za",
-    siteName: "The Startup Company",
+    title: site.name,
+    description: site.description,
+    url: site.url,
+    siteName: site.name,
     locale: "en_ZA",
     type: "website",
   },
+  alternates: { canonical: "/" },
   robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#16233d",
+  themeColor: "#161513",
   width: "device-width",
   initialScale: 1,
 };
