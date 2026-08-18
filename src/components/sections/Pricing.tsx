@@ -14,16 +14,20 @@ const TIERS = [
     featured: false,
   },
   {
-    name: "Growth",
-    price: "R2,450",
-    unit: "once-off",
-    copy: "The full registration stack for a business ready to trade.",
+    name: "Construction Package",
+    tag: "EME / SME",
+    price: "R4,950",
+    unit: "once-off, fully comprehensive",
+    copy: "Everything a construction EME or SME needs to legally register, tender, and trade — plus your first web presence.",
     features: [
-      "Everything in Starter",
-      "VAT & PAYE registration",
-      "B-BBEE affidavit",
-      "Tax clearance certificate",
-      "30-min compliance call",
+      "Business registration (Pty)",
+      "B-BBEE & tax clearance",
+      "CSD registration (Central Supplier Database)",
+      "Workmen's Compensation (COIDA)",
+      "CIDB Grade 1",
+      "UIF registration",
+      "Website + 3 email addresses",
+      "Logo design",
     ],
     featured: true,
   },
@@ -69,9 +73,16 @@ export function Pricing() {
                   Most chosen
                 </span>
               )}
-              <h3 className={cn("font-display text-xl font-semibold", tier.featured ? "text-paper" : "text-ink")}>
-                {tier.name}
-              </h3>
+              <div className="flex items-baseline gap-2">
+                <h3 className={cn("font-display text-xl font-semibold", tier.featured ? "text-paper" : "text-ink")}>
+                  {tier.name}
+                </h3>
+                {"tag" in tier && tier.tag && (
+                  <span className={cn("text-[11px] font-semibold uppercase tracking-wide", tier.featured ? "text-gold" : "text-gold-deep")}>
+                    {tier.tag}
+                  </span>
+                )}
+              </div>
               <p className={cn("mt-2 text-[13.5px] leading-relaxed", tier.featured ? "text-white/65" : "text-text-soft")}>
                 {tier.copy}
               </p>
@@ -97,6 +108,7 @@ export function Pricing() {
               </ul>
               <a
                 href="#cta"
+                data-cursor="hover"
                 className={cn(
                   "mt-8 inline-flex items-center justify-center rounded-full px-5 py-3 text-[13.5px] font-semibold transition-transform hover:-translate-y-0.5",
                   tier.featured ? "bg-gold text-ink" : "bg-ink text-paper"

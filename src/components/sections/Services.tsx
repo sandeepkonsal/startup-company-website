@@ -21,9 +21,9 @@ const SERVICES = [
     meta: "Filed on time, every time",
   },
   {
-    title: "BEE & Compliance Docs",
-    copy: "B-BBEE affidavits, UIF and COIDA registration, and the paperwork most first-time owners don't know they need.",
-    meta: "Ready for your first tender",
+    title: "Tender & Contractor Compliance",
+    copy: "B-BBEE affidavits, CSD listing, Workmen's Compensation, and CIDB grading for contractors who need to qualify for tenders.",
+    meta: "CIDB · CSD · COIDA · UIF",
   },
 ];
 

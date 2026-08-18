@@ -140,6 +140,7 @@ export function Hero() {
             </MagneticButton>
             <a
               href="#process"
+              data-cursor="hover"
               className="text-[13.5px] font-semibold text-ink underline decoration-line decoration-2 underline-offset-4 transition-colors hover:decoration-gold"
             >
               See how it works

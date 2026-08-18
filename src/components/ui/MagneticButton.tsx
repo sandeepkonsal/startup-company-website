@@ -45,6 +45,7 @@ export function MagneticButton({
     <motion.a
       ref={ref}
       href={href}
+      data-cursor="hover"
       style={{ x: springX, y: springY }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}

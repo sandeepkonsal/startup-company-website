@@ -7,6 +7,8 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { Pricing } from "@/components/sections/Pricing";
 import { CTA } from "@/components/sections/CTA";
 import { Footer } from "@/components/sections/Footer";
+import { TrustMarquee } from "@/components/ui/TrustMarquee";
+import { Divider } from "@/components/ui/Divider";
 
 export default function Home() {
   return (
@@ -14,8 +16,11 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <TrustMarquee />
         <Services />
+        <Divider from="paper" to="ink" />
         <Process />
+        <Divider from="ink" to="paper" />
         <WhyUs />
         <Testimonials />
         <Pricing />

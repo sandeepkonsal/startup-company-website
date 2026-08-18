@@ -33,7 +33,7 @@ export function Nav() {
       )}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-8">
-        <a href="#top" className="flex items-center gap-2.5">
+        <a data-cursor="hover" href="#top" className="flex items-center gap-2.5">
           <Mark className="h-8 w-8" />
           <span className="font-display text-[17px] font-semibold text-ink">
             The Startup Company
@@ -45,6 +45,7 @@ export function Nav() {
             <li key={link.href}>
               <a
                 href={link.href}
+                data-cursor="hover"
                 className="text-[13.5px] font-medium text-text-soft transition-colors hover:text-ink"
               >
                 {link.label}
@@ -55,6 +56,7 @@ export function Nav() {
 
         <a
           href="#cta"
+          data-cursor="hover"
           className="hidden rounded-full bg-ink px-5 py-2.5 text-[13px] font-semibold text-paper transition-transform hover:-translate-y-0.5 md:inline-flex"
         >
           Get Registered
@@ -95,6 +97,7 @@ export function Nav() {
                 <li key={link.href}>
                   <a
                     href={link.href}
+                    data-cursor="hover"
                     onClick={() => setOpen(false)}
                     className="text-[15px] font-medium text-text"
                   >
@@ -105,6 +108,7 @@ export function Nav() {
               <li>
                 <a
                   href="#cta"
+                  data-cursor="hover"
                   onClick={() => setOpen(false)}
                   className="inline-flex rounded-full bg-ink px-5 py-2.5 text-[13px] font-semibold text-paper"
                 >
