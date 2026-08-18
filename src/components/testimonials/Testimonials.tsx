@@ -19,7 +19,7 @@ export function Testimonials() {
             <div key={i} data-reveal-item className="rounded-2xl border border-line bg-cream-raised p-7">
               <p className="text-[15px] leading-relaxed text-text">&ldquo;{t.quote}&rdquo;</p>
               <div className="mt-6 flex items-center gap-3 border-t border-line pt-5">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-charcoal font-display text-[12px] font-semibold text-cream">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-charcoal font-display text-[12px] font-semibold text-text">
                   {t.name.charAt(0)}
                 </div>
                 <div>

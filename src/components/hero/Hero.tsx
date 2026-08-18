@@ -66,6 +66,18 @@ export function Hero() {
               <path d="M110,120 C116,130 116,136 120,144" />
             </motion.g>
 
+            {/* Lime glow halo behind the seed — the one deliberate accent moment */}
+            <motion.circle
+              initial={initial && { opacity: 0 }}
+              animate={{ opacity: [0.25, 0.55, 0.25] }}
+              transition={{ duration: 3.2, delay: 1, repeat: Infinity, ease: "easeInOut" }}
+              cx="110"
+              cy="110"
+              r="26"
+              fill="var(--color-lime)"
+              filter="blur(10px)"
+            />
+
             {/* The seed */}
             <motion.ellipse
               initial={initial && { opacity: 0, scale: 0.4, y: -16 }}
@@ -94,7 +106,7 @@ export function Hero() {
           initial={initial && { opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-[12px] font-semibold uppercase tracking-[0.16em] text-green-deep"
+          className="text-[12px] font-semibold uppercase tracking-[0.16em] text-sage"
         >
           {site.tagline}
         </motion.p>
@@ -115,7 +127,7 @@ export function Hero() {
               initial={initial && { y: "110%" }}
               animate={{ y: "0%" }}
               transition={{ duration: 0.9, delay: 0.78, ease: EASE }}
-              className="block italic text-green-deep"
+              className="block italic text-lime"
             >
               starts with an idea.
             </motion.span>
@@ -140,7 +152,7 @@ export function Hero() {
           <a
             href="#calculator"
             data-cursor="hover"
-            className="inline-flex items-center gap-2 rounded-full bg-charcoal px-7 py-3.5 text-sm font-semibold text-cream transition-transform hover:-translate-y-0.5"
+            className="glow-lime inline-flex items-center gap-2 rounded-full bg-lime px-7 py-3.5 text-sm font-semibold text-cream transition-transform hover:-translate-y-0.5"
           >
             Start Your Business <span aria-hidden="true">→</span>
           </a>

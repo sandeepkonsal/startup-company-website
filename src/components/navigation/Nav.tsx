@@ -49,7 +49,7 @@ export function Nav() {
         <a
           href={nav.cta.href}
           data-cursor="hover"
-          className="hidden items-center gap-2 rounded-full bg-charcoal px-5 py-2.5 text-[13px] font-semibold text-cream transition-transform hover:-translate-y-0.5 md:inline-flex"
+          className="hidden items-center gap-2 rounded-full bg-charcoal px-5 py-2.5 text-[13px] font-semibold text-text transition-transform hover:-translate-y-0.5 md:inline-flex"
         >
           {nav.cta.label} <span aria-hidden="true">→</span>
         </a>
@@ -91,7 +91,7 @@ export function Nav() {
                 <a
                   href={nav.cta.href}
                   onClick={() => setOpen(false)}
-                  className="inline-flex items-center gap-2 rounded-full bg-charcoal px-5 py-2.5 text-[13px] font-semibold text-cream"
+                  className="inline-flex items-center gap-2 rounded-full bg-charcoal px-5 py-2.5 text-[13px] font-semibold text-text"
                 >
                   {nav.cta.label} <span aria-hidden="true">→</span>
                 </a>

@@ -81,7 +81,8 @@ export const GrowthOrganism = forwardRef<
       </g>
 
       {/* Canopy highlight — a lighter sage pass for depth, mature tree only */}
-      <g ref={setRef("canopyHighlight")} fill="var(--color-sage)" opacity="0.5">
+      {/* Gold — the "legacy" moment, only present once the tree is mature */}
+      <g ref={setRef("canopyHighlight")} fill="var(--color-gold)" opacity="0.45">
         <circle cx="270" cy="170" r="34" />
         <circle cx="345" cy="200" r="28" />
       </g>

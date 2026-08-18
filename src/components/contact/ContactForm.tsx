@@ -76,7 +76,7 @@ export function ContactForm() {
                 {SERVICES.map((s) => (
                   <label
                     key={s}
-                    className="flex items-center gap-1.5 rounded-full border border-line bg-cream-raised px-3.5 py-1.5 text-[12.5px] text-text-soft has-[:checked]:border-green has-[:checked]:bg-green has-[:checked]:text-cream"
+                    className="flex items-center gap-1.5 rounded-full border border-line bg-cream-raised px-3.5 py-1.5 text-[12.5px] text-text-soft has-[:checked]:border-green has-[:checked]:bg-green has-[:checked]:text-text"
                   >
                     <input type="checkbox" name="services" value={s} className="hidden" />
                     {s}
@@ -94,7 +94,7 @@ export function ContactForm() {
               <button
                 type="submit"
                 data-cursor="hover"
-                className="sm:col-span-2 mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3.5 text-[13.5px] font-semibold text-cream transition-transform hover:-translate-y-0.5"
+                className="sm:col-span-2 mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3.5 text-[13.5px] font-semibold text-text transition-transform hover:-translate-y-0.5"
               >
                 Let&rsquo;s Grow Your Business →
               </button>

@@ -7,7 +7,7 @@ export function FinalCTA() {
   const whatsapp = whatsappHref("Hi, I'd like to start my business with The Startup Company.");
 
   return (
-    <section className="relative overflow-hidden bg-charcoal py-32 text-cream">
+    <section className="relative overflow-hidden bg-charcoal py-32 text-text">
       <div
         className="pointer-events-none absolute left-1/2 top-0 h-[520px] w-[900px] -translate-x-1/2 rounded-full opacity-[0.14] blur-3xl"
         style={{ background: "radial-gradient(circle, var(--color-green) 0%, transparent 65%)" }}
@@ -15,7 +15,7 @@ export function FinalCTA() {
       />
       <div className="relative mx-auto max-w-2xl px-6 text-center md:px-8">
         <Reveal className="flex flex-col items-center">
-          <svg data-reveal-item viewBox="0 0 100 140" className="h-24 w-16" aria-hidden="true">
+          <svg data-reveal-item viewBox="0 0 100 140" className="glow-gold h-24 w-16" aria-hidden="true">
             <line x1="50" y1="140" x2="50" y2="55" stroke="var(--color-green-deep)" strokeWidth="5" strokeLinecap="round" />
             <g fill="var(--color-green)">
               <circle cx="50" cy="42" r="30" />
@@ -45,7 +45,7 @@ export function FinalCTA() {
                 data-cursor="hover"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[13.5px] font-semibold text-text-on-dark-soft underline decoration-white/20 decoration-2 underline-offset-4 transition-colors hover:text-cream hover:decoration-gold"
+                className="text-[13.5px] font-semibold text-text-on-dark-soft underline decoration-white/20 decoration-2 underline-offset-4 transition-colors hover:text-text hover:decoration-gold"
               >
                 WhatsApp Us
               </a>

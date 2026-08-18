@@ -28,12 +28,12 @@ export function Packages() {
               className={cn(
                 "flex flex-col rounded-2xl border p-7",
                 pkg.featured
-                  ? "border-charcoal bg-charcoal text-cream shadow-[0_30px_60px_-20px_rgba(22,21,19,0.35)]"
+                  ? "border-charcoal bg-charcoal text-text shadow-[0_30px_60px_-20px_rgba(22,21,19,0.35)]"
                   : "border-line bg-cream-raised text-text"
               )}
             >
               <span className="text-2xl">{pkg.emoji}</span>
-              <h3 className={cn("font-display mt-3 text-xl font-semibold", pkg.featured ? "text-cream" : "text-text")}>
+              <h3 className="font-display mt-3 text-xl font-semibold text-text">
                 {pkg.name}
               </h3>
               <p className={cn("mt-2 text-[13px] leading-relaxed", pkg.featured ? "text-text-on-dark-soft" : "text-text-soft")}>
@@ -53,7 +53,7 @@ export function Packages() {
                 data-cursor="hover"
                 className={cn(
                   "mt-7 inline-flex items-center justify-center rounded-full px-5 py-3 text-[13px] font-semibold transition-transform hover:-translate-y-0.5",
-                  pkg.featured ? "bg-gold text-charcoal" : "bg-charcoal text-cream"
+                  pkg.featured ? "bg-gold text-charcoal" : "bg-charcoal text-text"
                 )}
               >
                 Get started

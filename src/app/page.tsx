@@ -1,6 +1,7 @@
 import { Nav } from "@/components/navigation/Nav";
 import { Hero } from "@/components/hero/Hero";
 import { GrowthStory } from "@/components/growth-story/GrowthStory";
+import { GradientJourney } from "@/components/journey/GradientJourney";
 import { Journey } from "@/components/journey/Journey";
 import { Services } from "@/components/services/Services";
 import { WhyUs } from "@/components/services/WhyUs";
@@ -20,6 +21,7 @@ export default function Home() {
       <main>
         <Hero />
         <GrowthStory />
+        <GradientJourney />
         <Journey />
         <Services />
         <WhyUs />

@@ -1,21 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --color-charcoal: #161513;
-  --color-charcoal-soft: #232019;
-  --color-cream: #f4efe6;
-  --color-cream-raised: #eee6d6;
-  --color-green: #3e6b4a;
-  --color-green-deep: #2c4d36;
-  --color-sage: #8fa491;
-  --color-earth: #6b5744;
-  --color-gold: #c9a24b;
-  --color-line: #ded2b8;
-  --color-line-dark: #33302a;
-  --color-text: #201d17;
-  --color-text-soft: #6b6355;
-  --color-text-on-dark: #f4efe6;
-  --color-text-on-dark-soft: #b9b3a3;
+  /* Dark-luxury palette. Token names kept from the original build
+     (cream/charcoal/green/etc.) so component classes didn't need touching —
+     only the values changed. Every color traces back here. */
+  --color-charcoal: #0f2b20;       /* Forest — secondary/accent dark bg */
+  --color-charcoal-soft: #1b5e3a;  /* Emerald — accent-dark hover/detail */
+  --color-cream: #0b0f0d;          /* Rich Black — primary background */
+  --color-cream-raised: #1a1f1c;   /* Slate — cards/surfaces */
+  --color-green: #1b5e3a;          /* Emerald — brand primary green */
+  --color-green-deep: #0f2b20;     /* Forest */
+  --color-sage: #6f8f7c;           /* muted green, subtle overlays only */
+  --color-earth: #4a4038;          /* muted root/soil brown */
+  --color-gold: #d4af37;           /* Gold — premium highlights */
+  --color-lime: #7cff72;           /* Lime — CTA/accent, used sparingly */
+  --color-line: #2a2f2c;           /* Stone — borders/dividers */
+  --color-line-dark: #20241f;
+  --color-text: #e9e2d2;           /* Sand — primary text (site is dark-first) */
+  --color-text-soft: #9aa39b;      /* muted sand */
+  --color-text-on-dark: #e9e2d2;
+  --color-text-on-dark-soft: #9aa39b;
+  --color-sand: #e9e2d2;
 }
 
 @theme inline {
@@ -28,18 +33,21 @@
   --color-sage: var(--color-sage);
   --color-earth: var(--color-earth);
   --color-gold: var(--color-gold);
+  --color-lime: var(--color-lime);
   --color-line: var(--color-line);
   --color-line-dark: var(--color-line-dark);
   --color-text: var(--color-text);
   --color-text-soft: var(--color-text-soft);
   --color-text-on-dark: var(--color-text-on-dark);
   --color-text-on-dark-soft: var(--color-text-on-dark-soft);
-  --font-display: var(--font-fraunces);
+  --color-sand: var(--color-sand);
+  --font-display: var(--font-bricolage);
   --font-body: var(--font-inter);
 }
 
 html {
   scroll-behavior: auto;
+  color-scheme: dark;
 }
 
 body {
@@ -49,7 +57,7 @@ body {
 }
 
 .font-display {
-  font-family: var(--font-display), Georgia, serif;
+  font-family: var(--font-display), "Arial Black", sans-serif;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -68,8 +76,17 @@ body {
 }
 
 ::selection {
-  background: var(--color-green);
+  background: var(--color-lime);
   color: var(--color-cream);
+}
+
+/* Lime/gold glow — reserved for primary CTAs and the seed/roots moments,
+   kept off everything else so it stays a rare, deliberate accent. */
+.glow-lime {
+  box-shadow: 0 0 0 1px rgba(124, 255, 114, 0.25), 0 8px 30px -6px rgba(124, 255, 114, 0.45);
+}
+.glow-gold {
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.55));
 }
 
 @keyframes drift {
@@ -89,10 +106,19 @@ body {
   transform-origin: bottom center;
 }
 
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2.6s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-drift,
   .animate-sway,
-  .animate-marquee {
+  .animate-marquee,
+  .animate-pulse-glow {
     animation: none;
   }
 }
@@ -126,8 +152,6 @@ body {
   animation: marquee 30s linear infinite;
 }
 
-/* Print: strip fixed decorative layers so a printed/PDF export of this very
-   tall page doesn't rasterize the grain texture and cursor on every sheet. */
 @media print {
   .grain-overlay {
     display: none;

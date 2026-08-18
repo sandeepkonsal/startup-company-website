@@ -105,7 +105,7 @@ export function GrowthStory() {
               </div>
               <div>
                 <p className="text-[11.5px] font-semibold uppercase tracking-[0.14em] text-gold">{stage.kicker}</p>
-                <h2 className="font-display balance mt-3 max-w-[16ch] text-3xl font-semibold text-cream md:text-4xl lg:text-[42px]">
+                <h2 className="font-display balance mt-3 max-w-[16ch] text-3xl font-semibold text-text md:text-4xl lg:text-[42px]">
                   {stage.headline}
                 </h2>
               </div>

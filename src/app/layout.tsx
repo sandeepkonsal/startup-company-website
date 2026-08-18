@@ -1,14 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Bricolage_Grotesque, Inter } from "next/font/google";
 import { Cursor } from "@/components/ui/Cursor";
 import { site } from "@/config/site";
 import "./globals.css";
 
-const fraunces = Fraunces({
+// Clash Display (the brand reference) isn't on Google Fonts — Bricolage
+// Grotesque is the closest self-hostable match for the same "bold, modern,
+// unstoppable" grotesk feel.
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-fraunces",
-  weight: ["500", "600", "700"],
-  style: ["normal", "italic"],
+  variable: "--font-bricolage",
+  weight: ["500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -55,7 +57,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
+    <html lang="en" className={`${bricolage.variable} ${inter.variable}`}>
       <body className="antialiased">
         <div className="grain-overlay" aria-hidden="true" />
         <Cursor />

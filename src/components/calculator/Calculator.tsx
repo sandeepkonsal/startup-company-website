@@ -111,7 +111,7 @@ export function Calculator() {
                         className={cn(
                           "rounded-full border px-4 py-2 text-[13px] font-medium transition-colors",
                           active
-                            ? "border-green bg-green text-cream"
+                            ? "border-green bg-green text-text"
                             : "border-line bg-cream-raised text-text-soft hover:border-green/50"
                         )}
                       >
@@ -132,7 +132,7 @@ export function Calculator() {
                     data-cursor="hover"
                     disabled={services.size === 0}
                     onClick={() => setStep(2)}
-                    className="inline-flex items-center gap-2 rounded-full bg-charcoal px-6 py-3 text-[13.5px] font-semibold text-cream transition-transform enabled:hover:-translate-y-0.5 disabled:opacity-40"
+                    className="inline-flex items-center gap-2 rounded-full bg-charcoal px-6 py-3 text-[13.5px] font-semibold text-text transition-transform enabled:hover:-translate-y-0.5 disabled:opacity-40"
                   >
                     See my plan →
                   </button>
@@ -177,7 +177,7 @@ export function Calculator() {
                   <a
                     href={whatsapp ?? "#contact"}
                     data-cursor="hover"
-                    className="inline-flex items-center gap-2 rounded-full bg-charcoal px-6 py-3 text-[13.5px] font-semibold text-cream transition-transform hover:-translate-y-0.5"
+                    className="inline-flex items-center gap-2 rounded-full bg-charcoal px-6 py-3 text-[13.5px] font-semibold text-text transition-transform hover:-translate-y-0.5"
                   >
                     Get My Business Plan →
                   </a>
