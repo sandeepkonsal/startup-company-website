@@ -42,7 +42,9 @@ export function GrowthStory() {
       gsap.set(p.sprout, { opacity: 0, scale: 0.6 });
       gsap.set(p.midCanopy, { opacity: 0, scale: 0.7 });
       gsap.set(p.canopy, { opacity: 0, scale: 0.6 });
+      gsap.set(p.canopyShade, { opacity: 0, scale: 0.6 });
       gsap.set(p.canopyHighlight, { opacity: 0 });
+      gsap.set(p.fruit, { opacity: 0, scale: 0.3, transformOrigin: "300px 235px" });
       gsap.set(p.stem, { scaleY: 0 });
       gsap.set(p.seed, { opacity: 1 });
 
@@ -80,7 +82,11 @@ export function GrowthStory() {
       // Stage 4 -> 5: the mature tree.
       tl.to(p.midCanopy, { opacity: 0.35, duration: 0.5 }, 3.9);
       tl.to(p.canopy, { opacity: 1, scale: 1, duration: 0.7, ease: "power2.out" }, 3.9);
+      tl.to(p.canopyShade, { opacity: 1, scale: 1, duration: 0.7, ease: "power2.out" }, 3.9);
       tl.to(p.canopyHighlight, { opacity: 1, duration: 0.6 }, 4.2);
+
+      // The very last beat: fruit settles in once the tree is fully grown.
+      tl.to(p.fruit, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.6)" }, 4.5);
     }, wrap);
 
     return () => {

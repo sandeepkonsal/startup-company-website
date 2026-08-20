@@ -72,19 +72,55 @@ export const GrowthOrganism = forwardRef<
         <path d="M300,340 C296,300 300,265 300,230 C312,262 314,305 300,340 Z" />
       </g>
 
-      {/* Full canopy — stage 5, the mature tree crown */}
+      {/* Full canopy — stage 5, the mature tree crown. Built from many
+          overlapping lobes at varied sizes so it reads as one soft, rounded
+          mass rather than four visible circles. */}
       <g ref={setRef("canopy")} fill="var(--color-green)" style={{ transformOrigin: "300px 220px" }}>
-        <circle cx="300" cy="210" r="95" />
-        <circle cx="225" cy="250" r="70" />
-        <circle cx="375" cy="250" r="70" />
-        <circle cx="300" cy="130" r="60" />
+        <circle cx="300" cy="235" r="88" />
+        <circle cx="215" cy="255" r="66" />
+        <circle cx="385" cy="255" r="66" />
+        <circle cx="248" cy="175" r="58" />
+        <circle cx="352" cy="175" r="58" />
+        <circle cx="300" cy="130" r="56" />
+        <circle cx="255" cy="290" r="46" />
+        <circle cx="345" cy="290" r="46" />
+        <circle cx="300" cy="300" r="52" />
       </g>
 
-      {/* Canopy highlight — a lighter sage pass for depth, mature tree only */}
-      {/* Gold — the "legacy" moment, only present once the tree is mature */}
-      <g ref={setRef("canopyHighlight")} fill="var(--color-gold)" opacity="0.45">
-        <circle cx="270" cy="170" r="34" />
-        <circle cx="345" cy="200" r="28" />
+      {/* A darker underside pass, offset low and behind the highlight, so the
+          canopy reads as a rounded volume rather than a flat silhouette. */}
+      <g ref={setRef("canopyShade")} fill="var(--color-green-deep)" opacity="0.35" style={{ transformOrigin: "300px 220px" }}>
+        <circle cx="300" cy="300" r="50" />
+        <circle cx="230" cy="270" r="34" />
+        <circle cx="370" cy="270" r="34" />
+      </g>
+
+      {/* Canopy highlight — a lighter gold pass for depth, mature tree only.
+          Gold is the "legacy" moment, only present once the tree is mature. */}
+      <g ref={setRef("canopyHighlight")} fill="var(--color-gold)" opacity="0.4">
+        <circle cx="258" cy="165" r="30" />
+        <circle cx="335" cy="150" r="24" />
+        <circle cx="300" cy="200" r="22" />
+      </g>
+
+      {/* Fruit — the very last beat: small, ripe dots settled into the
+          canopy once the tree is fully grown. The stem ticks live in the
+          same group so they only ever appear together with the fruit. */}
+      <g ref={setRef("fruit")}>
+        <g fill="none" stroke="var(--color-green-deep)" strokeWidth="1.4" strokeLinecap="round" opacity="0.6">
+          <path d="M240,213 L240,220" />
+          <path d="M335,198 L335,205" />
+          <path d="M285,263 L285,270" />
+        </g>
+        <g fill="var(--color-gold)">
+          <circle cx="240" cy="220" r="8" />
+          <circle cx="335" cy="205" r="7" />
+          <circle cx="285" cy="270" r="8" />
+          <circle cx="365" cy="240" r="6.5" />
+          <circle cx="220" cy="270" r="6.5" />
+          <circle cx="320" cy="150" r="7" />
+          <circle cx="300" cy="255" r="7.5" />
+        </g>
       </g>
     </svg>
   );
