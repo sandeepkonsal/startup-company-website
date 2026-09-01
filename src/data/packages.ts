@@ -13,7 +13,7 @@ export const packages: Package[] = [
     emoji: "🌱",
     name: "Seed",
     forWhom: "For people starting with an idea.",
-    price: "From R15,000",
+    price: "From R9,500",
     featured: false,
     inclusions: ["Business registration", "Basic business setup", "Domain", "Professional email", "Hosting"],
   },
