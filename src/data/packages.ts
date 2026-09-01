@@ -15,7 +15,14 @@ export const packages: Package[] = [
     forWhom: "For people starting with an idea.",
     price: "From R9,500",
     featured: false,
-    inclusions: ["Business registration", "Basic business setup", "Domain", "Professional email", "Hosting"],
+    inclusions: [
+      "Business registration",
+      "Basic business setup",
+      "Professional website",
+      "Domain",
+      "Professional email",
+      "Hosting",
+    ],
   },
   {
     emoji: "🌿",
