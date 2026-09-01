@@ -18,6 +18,7 @@ export const packages: Package[] = [
     inclusions: [
       "Business registration",
       "Basic business setup",
+      "Logo design",
       "Professional website",
       "Domain",
       "Professional email",
