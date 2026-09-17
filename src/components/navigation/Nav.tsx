@@ -27,7 +27,7 @@ export function Nav() {
       )}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 md:px-8">
-        <a href="#top" data-cursor="hover" className="flex items-center gap-2.5">
+        <a href="/#top" data-cursor="hover" className="flex items-center gap-2.5">
           <LeafMark className={cn("transition-[width,height] duration-300", scrolled ? "h-7 w-7" : "h-8 w-8")} />
           <span className="font-display text-[16.5px] font-semibold text-text">{site.name}</span>
         </a>

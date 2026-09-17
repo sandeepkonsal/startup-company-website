@@ -20,12 +20,15 @@ export function whatsappHref(prefilledMessage?: string) {
 }
 
 export const nav = {
+  // Anchor links are "/#id" (not "#id") so they still resolve correctly
+  // from pages other than the homepage, like /our-work.
   links: [
-    { href: "#how-it-works", label: "How It Works" },
-    { href: "#services", label: "Services" },
-    { href: "#packages", label: "Packages" },
-    { href: "#growth", label: "Growth" },
-    { href: "#faq", label: "FAQ" },
+    { href: "/#how-it-works", label: "How It Works" },
+    { href: "/#services", label: "Services" },
+    { href: "/#packages", label: "Packages" },
+    { href: "/#growth", label: "Growth" },
+    { href: "/our-work", label: "Our Work" },
+    { href: "/#faq", label: "FAQ" },
   ],
-  cta: { href: "#calculator", label: "Start Your Business" },
+  cta: { href: "/#calculator", label: "Start Your Business" },
 };
